@@ -1,0 +1,6 @@
+ansible
+ara
+awscli
+boto3
+psycopg2-binary
+pyopenssl
