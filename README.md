@@ -4,6 +4,7 @@ Ansible with extra deployment tools. You can find the latest image in [Docker Hu
 
 This docker image offers the following tools.
 
+* [Python 3.7](https://www.python.org/)
 * [Ansible](https://www.ansible.com/)
 * [ARA](https://github.com/openstack/ara)
 * [aws-cli](https://github.com/aws/aws-cli)
