@@ -14,3 +14,4 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir ~/.ssh/ \
     && echo "StrictHostKeyChecking no" > ~/.ssh/config
+RUN ln -sf /usr/local/bin/python3 /usr/bin/python
