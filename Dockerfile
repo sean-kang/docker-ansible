@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     jq \
     curl \
     git \
+    libpq5 \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir ~/.ssh/ \
     && echo "StrictHostKeyChecking no" > ~/.ssh/config
