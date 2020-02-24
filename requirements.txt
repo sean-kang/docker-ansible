@@ -1,6 +1,11 @@
-ansible
-ara
-awscli
-boto3
-psycopg2-binary
-pyopenssl
+ansible==2.7.10
+ara==0.16.3
+awscli==1.16.139
+boto3==1.9.129
+psycopg2-binary==2.8
+pyopenssl==19.0.0
+python-dateutil==2.8.0
+cryptography==2.6.1
+bcrypt==3.1.6
+pynacl==1.3.0
+asn1crypto==0.24.0
