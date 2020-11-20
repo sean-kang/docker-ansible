@@ -2,5 +2,6 @@ ansible
 ara
 awscli
 boto3
+paramiko
 psycopg2-binary
 pyopenssl

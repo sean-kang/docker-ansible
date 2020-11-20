@@ -1,11 +1,15 @@
-FROM python:3.7 as builder
+FROM python:3.8 as builder
 RUN apt-get update && apt-get install -y python-dev
-COPY requirements.txt /tmp/
-RUN pip install --install-option="--prefix=/install" --requirement /tmp/requirements.txt
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 
-FROM python:3.7-slim
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
+FROM python:3.8-slim
 LABEL maintainer="Sean Kang <es.guybrush@gmail.com>"
-COPY --from=builder /install /usr/local
+COPY --from=builder /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 RUN apt-get update && apt-get install -y \
     jq \
     curl \
